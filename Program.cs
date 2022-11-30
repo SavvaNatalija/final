@@ -9,20 +9,18 @@
 
 void StringLessFoureCharackers(string []mass)
 {
-    string str = new String("");
     List<string> Massiv = new List<string>();
     int count = 0;
     for (int i = 0; i < mass.GetLength(0); i++)
-    {
-        str = mass[i];
-        char[] arr = str.ToArray();
-
+    {        
+        char[] arr = mass[i].ToArray();
         if (arr.GetLength(0) < 4)
         {
-            Massiv.Add(new string(str));
+            Massiv.Add(new string(mass[i]));
             count++;                       
         }
     }
+    
     Console.WriteLine("В данном массиве строки менее 4 символов ");
     if (Massiv.Count == 0)
     {
